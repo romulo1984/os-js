@@ -35,7 +35,6 @@ export const createFile = async (File: IFile) => {
 
     if (File.parentId) {
       const parent = await getFile(File.parentId)
-      console.log('Parent', parent)
       if (parent) {
         newFile.parentId = File.parentId
       }
