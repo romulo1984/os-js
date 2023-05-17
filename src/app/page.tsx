@@ -1,12 +1,10 @@
 import styles from './page.module.scss'
-import { Test } from '@/components/test'
+import { Desktop } from '@/components/desktop'
 
-export default function Desktop() {
+export default function Main() {
   return (
     <main className={styles.main}>
-      <div className={styles.test}>
-        <Test />
-      </div>
+      <Desktop />
     </main>
   )
 }

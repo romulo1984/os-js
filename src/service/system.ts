@@ -47,3 +47,5 @@ export const createFile = async (File: IFile) => {
 }
 
 export const removeFile = async (id: number) => db.files.delete(id)
+
+export const isOpen = () => db.isOpen()

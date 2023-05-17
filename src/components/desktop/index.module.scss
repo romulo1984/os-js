@@ -1,0 +1,22 @@
+.desktop {
+  @extend .align-left;
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  height: 100vh;
+  padding: 16px 8px;
+}
+
+.align-right {
+  flex-direction: column;
+  align-items: end;
+  align-content: flex-start;
+  flex-wrap: wrap-reverse;
+}
+
+.align-left {
+  flex-direction: column;
+  align-items: start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
