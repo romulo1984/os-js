@@ -20,3 +20,103 @@
   align-content: flex-start;
   flex-wrap: wrap;
 }
+
+.tempCreateFile {
+  position: fixed;
+  right: 12px;
+  top: 12px;
+  padding: 12px 18px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  
+  max-width: 100%;
+
+  button {
+    @extend .btn;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  max-width: 100%;
+  border: 1px solid #fff;
+  margin-top: 12px;
+  padding: 4px 8px;
+  input, textarea, select {
+    margin-bottom: 8px;
+    height: 32px;
+    border-radius: 4px;
+    border: 0;
+  }
+}
+
+.btn {
+  padding: 4px 12px;
+  min-width: 88px;
+  border: none;
+  font: inherit;
+  color: #373030;
+  border-radius: 4px;
+  outline: none;
+  text-decoration: none;
+  cursor: default;
+  font-weight: 400;
+  background: #fff;
+  // border: 1px solid #ccc;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.30), 0px 1px 1px rgba(0, 0, 0, .4);
+
+  &:active {
+    background: linear-gradient(#4faefc, #006bff);
+    color: #fff;
+    position: relative;
+  }
+
+  &.btn-blue {
+    color: #fff;
+    background: linear-gradient(lighten(#4faefc, 10%), lighten(#006bff, 10%));
+
+    &:active {
+      background: linear-gradient(#4faefc, #006bff);
+    }
+  }
+  &.btn-red {
+    color: #fff;
+    background: linear-gradient(lighten(#fc2125, 15%), darken(#fc2125, 10%));
+    
+    &:active {
+      background: linear-gradient(#fc2125, darken(#fc2125, 20%));
+    }
+  }
+  
+  &.btn-green {
+    color: #fff;
+    background: linear-gradient(lighten(#56d72b, 15%), darken(#56d72b, 10%));
+    
+    &:active {
+      background: linear-gradient(#56d72b, darken(#56d72b, 20%));
+    }
+  }
+  
+  &.btn-brown {
+    color: #fff;
+    background: linear-gradient(lighten(#90714c, 15%), darken(#90714c, 10%));
+    
+    &:active {
+      background: linear-gradient(#90714c, darken(#90714c, 20%));
+    }
+  }
+
+  &.btn-lg {
+    font-size: 1.2em;
+    padding: 12px 24px;
+  }
+  &.btn-block {
+    display: block;
+    width: 100%;
+  }
+}
