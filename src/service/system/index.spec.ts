@@ -1,4 +1,4 @@
-import { getFile, createFile, removeFile, useFiles } from './system'
+import { getFile, createFile, removeFile, useFolderFiles } from '.'
 import { mockFiles } from './mocks'
 
 vi.mock('dexie-react-hooks', () => ({
@@ -45,6 +45,6 @@ describe('System', () => {
   })
 
   test('should return all files', async () => {
-    expect(useFiles()).resolves.toMatchObject(mockFiles)
+    expect(useFolderFiles('Desktop')).resolves.toMatchObject(mockFiles)
   })
 })

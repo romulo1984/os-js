@@ -13,5 +13,12 @@ export const MIME_TYPES_ICONS = {
 export const SETTINGS = {
   version: '0.1.0',
   version_name: 'bigsur',
-  icons_path: '/icons/bigsur-brown/'
+  icons_path: '/icons/bigsur-blue/'
+}
+
+export const FILE_STATUS = {
+  ACTIVE: 'active',
+  DELETED: 'deleted',
+  ARCHIVED: 'archived',
+  HIDDEN: 'hidden'
 }

@@ -11,8 +11,10 @@ type FileProps = {
 
 export const File = ({ file, size = 52 }: FileProps) => {
   const { show } = useContextMenu({ id: 'desktop', props: { file } })
-  const type = file.type.replace('/', '-')
-  const src = `${SETTINGS.icons_path}mimes/scalable/${type}.svg`
+  const type = file?.type?.replace('/', '-')
+  const src = type === 'folder'
+    ? `${SETTINGS.icons_path}places/scalable/${type}.svg`
+    : `${SETTINGS.icons_path}mimes/scalable/${type}.svg`
 
   const displayMenu = (e: TriggerEvent) => {
     show({ event: e })
@@ -24,7 +26,7 @@ export const File = ({ file, size = 52 }: FileProps) => {
         src={src}
         width={size}
         height={size}
-        alt={file.name}
+        alt={file.name || 'Unamed file'}
       />
       <p>{file.name}</p>
     </div>

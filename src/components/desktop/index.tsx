@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { useFiles, isOpen, createFile } from '@/service/system'
+import { isOpen, createFile, useFolderFiles } from '@/service/system'
 import { Loading } from '@/components/loading'
 import { File } from '@/components/file'
 import { IFile } from '@/db/types'
@@ -8,7 +8,7 @@ import styles from './index.module.scss'
 import { Menu } from '@/components/menu'
 
 export const Desktop = () => {
-  const files = useFiles()
+  const files = useFolderFiles('Desktop')
   const [name, setName] = useState('')
   const [content, setContent] = useState('')
   const [type, setType] = useState('text/plain')
